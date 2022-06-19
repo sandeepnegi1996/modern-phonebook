@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import javax.swing.plaf.basic.BasicColorChooserUI.PropertyHandler;
 
 public class PhoneBook {
 
@@ -36,33 +35,23 @@ public class PhoneBook {
             System.out.println("Please select one option ");
             int userInput = scan.nextInt();
 
-            if (userInput==1) {
-
-                //add new user details 
-                
-
-                addNewUser();
-
-                
+            switch (userInput) {
+                case 1:
+                    //add new user details
+                    addNewUser();
+                    break;
+                case 2:
+                    displayAllUserDetails();
+                    System.out.println();
+                    break;
+                case 3:
+                    //lets first find user details using name
+                    findUserDetails();
+                    break;
+                default:
+                    System.out.println("Exit ....");
+                    isExit=false;
             }
-            else if(userInput==2) {
-
-                displayAllUserDetails();
-                System.out.println();
-
-            }
-            else if(userInput==3) {
-
-                //lets first find user details using name 
-                findUserDetails();
-
-            }
-            else {
-
-                System.out.println("Exit ....");
-                isExit=false;
-            }
-
         }while(isExit); 
 
     }
@@ -98,7 +87,7 @@ public class PhoneBook {
         for (User user : listOfUsers) {
             if (user.getName().equals(username)) {
 
-               isUserPresent=true; 
+               isUserPresent=true;
             }
             
         }
