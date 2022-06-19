@@ -100,12 +100,6 @@ public class PhoneBook {
             System.out.println("User is not present in the database ");
         }
 
-
-
-
-
-
-
     }
 
     
@@ -143,16 +137,8 @@ class User {
     @Override
     public String toString() {
 
-        return "Username is : " + this.name + "  PhoneNumber : " +this.phoneNumber;
+        String result = "Username is : " + this.name + "  PhoneNumber : " +this.phoneNumber;
+
+        return result;
     }
-
-
-    
-
-
-
-
-
-
-    
 }
