@@ -61,14 +61,19 @@ public class PhoneBook {
         
         String name;
         int phoneNumber;
+        
+        System.out.println("Please print the name of the new user.");
         name=scan.next();
+        
+        System.out.println("Please print the new user's phone number.");
         phoneNumber=scan.nextInt();
+        
+        System.out.println("User Details Successfully Stored.");
 
         User u=new User(name, phoneNumber);
 
         listOfUsers.add(u);
-
-
+        
     }
 
     public static void displayAllUserDetails() {
